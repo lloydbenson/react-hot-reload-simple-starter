@@ -21,6 +21,6 @@ If you want to play around run `npm run dev`. This will start webpack in watch m
 
 If you want to see the results, run `npm run build` and check the "build" folder. This will generate a production build. This enables compression and chunk order optimizations.
 
-## Warning
+## :warning: Warning :warning:
 
 This is sill a work in progress. There is beta modules being used. Also, there are `setTimeouts` in the lazy loading code for dramatic flare. You wouldn't want to go to production with that in there.
