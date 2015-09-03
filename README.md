@@ -1,5 +1,7 @@
 # React Hot Reload Starter
 
+[![GitHub release](https://img.shields.io/github/release/continuationlabs/react-hot-reload-simple-starter.svg)](https://github.com/continuationlabs/react-hot-reload-simple-starter)
+
 This is a basic react + webpack starter bundle. Be prepared to add your own style, this has less than none. The motivation for making this was we couldn't find a simple setup that was feature rich. We think this setup will scale nicely for small to medium sized web applications. If you're familier with webpack, you know it's very powerful, but sometimes lacking in the documentation and practical example departments. Hopefully this simple example will help you build your own setup or you can just start with ours!
 
 ## Features

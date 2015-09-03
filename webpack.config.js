@@ -10,10 +10,8 @@ var AutoPrefixer = require('autoprefixer-stylus');
 
 var argv = Minimist(process.argv);
 var plugins = [];
-plugins.push(new HtmlWebpackPlugin({
-  template: 'index.template',
-  inject: 'body'
-}));
+var entry = ['./style/main.styl', './js/app.js'];
+
 plugins.push(new Webpack.EnvironmentPlugin('NODE_ENV'));
 
 if (argv.prod) {
@@ -24,15 +22,27 @@ if (argv.prod) {
   }));
   plugins.push(new Clean(['build']));
   plugins.push(new Webpack.optimize.OccurenceOrderPlugin(true));
+  plugins.push(new HtmlWebpackPlugin({
+    template: 'index.prod.template',
+    inject: 'body'
+  }));
+}
+else {
+  entry.unshift('webpack/hot/dev-server');
+  plugins.push(new HtmlWebpackPlugin({
+    template: 'index.dev.template',
+    inject: 'body'
+  }));
 }
 
 module.exports = {
+  context: Path.join(process.cwd(), 'client'),
   entry: {
-    app: ['webpack/hot/dev-server', './client/style/main.styl', './client/js/app.js']
+    app: entry
   },
   output: {
     path: './build',
-    filename: 'bundle.js'
+    filename: '[name]-[hash].js'
   },
   module: {
     loaders: [{
@@ -46,7 +56,7 @@ module.exports = {
       loader: 'style-loader!css-loader!stylus-loader?paths=node_modules/jeet/stylus/'
     }, {
       test: /\.(ttf|eot|svg|png)$/,
-      loader: "file"
+      loader: 'file'
     }]
   },
   resolve: {
