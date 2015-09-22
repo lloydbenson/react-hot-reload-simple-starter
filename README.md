@@ -2,7 +2,7 @@
 
 [![GitHub release](https://img.shields.io/github/release/continuationlabs/react-hot-reload-simple-starter.svg)](https://github.com/continuationlabs/react-hot-reload-simple-starter)
 
-This is a basic react + webpack starter bundle. Be prepared to add your own style, this has less than none. The motivation for making this was we couldn't find a simple setup that was feature rich. We think this setup will scale nicely for small to medium sized web applications. If you're familier with webpack, you know it's very powerful, but sometimes lacking in the documentation and practical example departments. Hopefully this simple example will help you build your own setup or you can just start with ours!
+This is a basic react + webpack starter bundle. Be prepared to add your own style, this has less than none. The motivation for making this was we couldn't find a simple setup that was feature rich. We think this setup will scale nicely for small to medium sized web applications. If you're familiar with webpack, you know it's very powerful, but sometimes lacking in the documentation and practical example departments. Hopefully this simple example will help you build your own setup or you can just start with ours!
 
 ## Features
 
@@ -25,4 +25,4 @@ If you want to see the results, run `npm run build` and check the "build" folder
 
 ## :warning: Warning :warning:
 
-This is sill a work in progress. There is beta modules being used. Also, there are `setTimeouts` in the lazy loading code for dramatic flare. You wouldn't want to go to production with that in there.
+This is still a work in progress. There are beta modules being used. Also, there are `setTimeouts` in the lazy loading code for dramatic flare. You wouldn't want to go to production with that in there.
